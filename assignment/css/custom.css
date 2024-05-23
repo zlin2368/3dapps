@@ -1,0 +1,773 @@
+/*Global Variables*/
+:root {
+    --primary-color: #f9f9f9; /* Default Light Mode Red */
+    --secondary-color: #FFFFE0; /* Default Light Yellow */
+    --background-color: #FFFFFF; /* Default Background White */
+    --primary-text-color: #000000; /* Default Text Black */
+    --secondary-text-color: #000000; /* Default Dim Grey */
+}
+
+/* Ensure the images within the carousel are appropriately sized */
+.carousel-item img {
+    max-height: 100%; /* Ensure the image does not exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Adjust the height to fit within the desired size */
+    position: center;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Ensure the images within the modal are appropriately sized */
+.modal-body img {
+    height: auto; /* Maintain aspect ratio */
+}
+.tooltip-inner {
+    background-color: red !important; /* Red background */
+    color: white !important; /* White font color */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Change this to your desired font */
+    font-size: 14px; /* Adjust the font size as needed */
+}
+
+.tooltip-arrow {
+    border-top-color: red !important; /* Match the tooltip background color */
+    border-bottom-color: red !important; /* Match the tooltip background color */
+}
+body {
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+}
+
+.navbar {
+    background-color: var(--primary-color) !important;
+}
+
+.navbar .navbar-brand, .navbar .nav-link {
+    color: var(--primary-text-color);
+}
+
+.card {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+}
+
+
+/* Method to declare your own fonts */
+@font-face {
+    font-family: cocaColaFont;
+    src: url(../assets/fonts/loki_cola/LOKICOLA.TTF);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../assets/fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(../assets/fonts/Oswald/static/Oswald-Regular.ttf);
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in Bootstrap
+*/
+
+
+.tooltip .tooltip-inner {
+    background-color: rgb(86, 146, 250);
+    /* Change the background color */
+    color: rgb(0, 0, 0);
+    /* Change the text color */
+    font-weight: bold;
+
+}
+
+.nav-link{
+    color: var(--primary-text-color)!important; ;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.nav-link:hover{
+    background-color: var(--primary-text-color);
+    color: var(--background-color)!important; ;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.bg-dark{
+    transition: 0.75s;
+    background-color: var(--primary-color)!important; ;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    border-color: var(--background-color);
+
+}
+.btn:hover {
+    background-color: var(--background-color);
+    color:  var(--primary-text-color);
+    border-color: var(--background-color);
+
+}
+
+
+
+.tooltip::before {
+    border-bottom-color: red;
+    /* Change the color of the tooltip arrow */
+}
+
+
+
+
+.custom-row {
+
+    flex-direction: column;
+}
+
+body {
+    transition: 0.75s;
+    background-color: var(--background-color);
+
+}
+
+.main_contents {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Some simple CSS rules for styling p, h1 to h6, etc. in the main contents container */
+p {
+    font-family: 'OpenSans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+    /*font-family: cocaColaFont;*/
+}
+
+/* CSS rules for the main_text IDs */
+#main_3d_image {
+    background-image: url(../assets/images/main_3D_538.jpg);
+    background-repeat: no-repeat;
+    height: 200px;
+}
+
+#main_text {
+    float: left;
+    margin: 5%;
+    width: 90%;
+    display: block;
+
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#main_text h2 {
+    color: rgba(0, 102, 153, 1);
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+#main_text h3 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#main_text p {
+    font-size: 12px;
+    margin: 0px;
+    line-height: 1.2;
+}
+
+.card {
+    transition: 0.75s;
+    border: 1px solid rgba(0, 0, 0, .125);
+    /* border-radius: .25rem;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+
+}
+
+.card-text {
+    font-size: 13px;
+    color: var(--primary-text-color);
+}
+
+
+
+
+
+.shadow-text {
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
+
+.carousel-caption {
+    display: none;
+}
+
+
+
+.logo {
+    color: white;
+    text-align: center;
+    padding: 4px;
+    margin-top: 2px;
+
+
+
+}
+
+.logo h1 {
+    font-family: cocaColaFont;
+    font-size: 41px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin: 0;
+    margin-top: 0px;
+    margin-bottom: -15px;
+    float: left;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 2px;
+}
+
+.logo h2 {
+    font-family: cocaColaFont;
+    font-size: 43px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: -15px;
+    padding-top: 0px;
+    padding-left: 5px;
+    padding-right: 3px;
+    float: left;
+}
+
+.logo h3 {
+    font-size: 31px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    padding-top: 0px;
+    padding-left: 0px;
+    float: left;
+}
+
+.logo p {
+    display: none;
+    font-size: 10px;
+    margin-top: 31px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    
+}
+
+.logo a:hover {
+    color: var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+/* New CSS rules to better position the navbar and increase its height, Bootstrap defaults tend to make your site look like a Bootstrap clone! 
+    */
+
+/* CSS rule to overwrite the navbar background and border color — again, helps to stop your site looking like a Bootstrap clone! 
+    */
+
+
+
+
+/* CSS rule to overwrite the navbar-brand font hover color
+    */
+.navbar-brand:hover {
+    color: white;
+}
+
+/* NAVIGATION MENU
+    */
+
+/* CSS rules to overwrite the position of the Bootstrap menu These are derived from the Bootstrapbay Bootstrap Tutorial Part 11 — CSS Modifications to Navbar and Buttons shows how to do this using Bootstrap 3, the principle should be the same: https://www.youtube.com/watch?v=7v2yC3GyDHU  
+
+    There is plenty more styling to do than indicated here, in mobile it still defaults to Bootstrap CSS on dropdown!
+    */
+.navbar_coca_cola .navbar-nav>li>a {
+    color: white;
+}
+
+/* CSS rule to overwrite the bootstrap.css text hover color on the navbar
+    */
+.navbar_coca_cola .navbar-nav>li>a:hover,
+.navbar_coca_cola .navbar-nav>li>a:focus {
+    color: green;
+}
+
+.navbar_coca_cola .navbar-nav .nav-item {
+    margin-top: 0px;
+}
+
+/* CSS rule to overwrite the bootstrap.css rules for setting the active font color and background colour
+    */
+.navbar_coca_cola .navbar-nav .nav-item>.active,
+.navbar_coca_cola .navbar-nav>.active>a:hover,
+.navbar_coca_cola .navbar-nav>.active>a:focus {
+    color: #ffffff;
+    /* Font color for active font */
+
+}
+
+/* A set of CSS rules to change the Bootstrap defaults for the menu link text color, hover, background, focus
+    */
+
+/* CSS rule to overwrite the bootstrap.css text hover color on the navbar
+    */
+.navbar_coca_cola .navbar-nav>li>a:hover,
+.navbar_coca_cola .navbar-nav>li>a:focus {
+    color: 65f079;
+}
+
+/* These next two CSS rules control the style of the icon bar */
+.navbar_coca_cola .navbar-toggler {
+    border-color: white;
+}
+
+.navbar_coca_cola .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1.0)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar_coca_cola .navbar-toggler {
+    outline: none !important;
+}
+
+/* Let's style the dropdown menu
+    */
+
+.dropdown-menu {
+    text-align: -webkit-left;
+    background-color: var(--secondary-color);
+    margin-top: 20px;
+    /* Experiment to move the dropdown menu down */
+}
+
+.dropdown-menu .dropdown-item {
+    color: #4a9eff;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: #030303;
+    background-color: var(--primary-color);
+}
+
+/* CSS rule to style the footer */
+.footer {
+    color: #030303;
+    background-color: var(--primary-color);
+    /* Set navbar footer background color same as header */
+    height: 50px;
+}
+
+.navbar-text>a {
+    font-size: 10px;
+}
+
+.navbar-text>p {
+    color: var(--primary-text-color);
+    ;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.copyright {
+    padding-top: 8px;
+    width: 60%;
+}
+
+.social {
+    padding-top: 0px;
+    width: 30%;
+}
+
+.fa-twitter-square:before {
+    content: "\f081";
+    color: var(--primary-text-color);
+    font-size: 1em;
+}
+
+.fa-github-square:before {
+    content: "\f092";
+    color: var(--primary-text-color);
+    font-size: 1em;
+}
+
+.fa-google-plus-square:before {
+    content: "\f0d4";
+    color: var(--primary-text-color);
+    font-size: 1em;
+}
+
+.fa-facebook-square:before {
+    content: "\f082";
+    color: var(--primary-text-color);
+    font-size: 1em;
+}
+
+
+.navbar .navbar-collapse {
+    display: none !important;
+}
+
+.navbar .navbar-toggler {
+    display: block;
+}
+
+.navbar .navbar-toggler-icon {
+    display: inline-block;
+}
+
+.navbar .collapsed .navbar-collapse {
+    display: none !important;
+}
+
+.navbar .collapsed .navbar-toggler {
+    display: block;
+}
+
+.navbar .collapsed .navbar-toggler-icon {
+    display: inline-block;
+}
+
+
+
+
+
+/* Small devices (landscape phones, 576px and up)
+*/
+@media (min-width: 576px) {
+
+    .custom-row {
+
+        flex-direction: column;
+    }
+
+
+    .carousel-caption {
+        display: none;
+    }
+
+}
+
+/* Medium devices (tablets, 768px and up)
+*/
+@media (min-width: 768px) {
+
+
+
+    /* Logo for medium */
+
+
+    .logo {
+        color: var(--primary-text-color);
+        ;
+        text-align: center;
+        padding: 4px;
+        margin-top: 2px;
+
+
+
+    }
+
+    .logo h1 {
+        font-family: cocaColaFont;
+        font-size: 41px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        margin: 0;
+        margin-top: 0px;
+        margin-bottom: -15px;
+        float: left;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 2px;
+    }
+
+    .logo h2 {
+        font-family: cocaColaFont;
+        font-size: 43px;
+        font-weight: bold;
+        margin-top: 5px;
+        margin-bottom: -15px;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 3px;
+        float: left;
+    }
+
+    .logo h3 {
+        font-size: 31px;
+        font-weight: bold;
+        margin-top: 5px;
+        margin-bottom: 3px;
+        padding-top: 0px;
+        padding-left: 0px;
+        float: left;
+    }
+
+    .logo p {
+        display: block;
+        font-size: 10px;
+        margin-top: 46px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+
+    .logo a {
+        text-decoration: none;
+        color: var(--primary-text-color);
+    }
+
+    .logo a:hover {
+        color: var(--primary-text-color);
+    background-color: var(--primary-color);
+    }
+
+    .custom-row {
+
+        flex-direction: column;
+    }
+
+
+
+    #main_3d_image {
+        background-image: url(../assets/images/main_3D_970.jpg);
+        background-repeat: no-repeat;
+        height: 363px;
+    }
+
+    .card {
+        border: 0px solid rgba(0, 0, 0, .125);
+        /* border-radius: .25rem;*/
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: var(--primary-color);
+    }
+
+    #main_text {
+        float: right;
+        margin-top: 7%;
+    }
+
+    #main_text h2 {
+        /* color: crimson; */
+        font-size: 30px;
+    }
+
+    #main_text h3 {
+        /* color: darkcyan; */
+        font-size: 22px;
+    }
+
+    #main_text p {
+        font-size: 15px;
+    }
+
+    /* Navbar medium switch */
+
+    .navbar .navbar-collapse {
+        display: block !important;
+    }
+
+    .navbar .navbar-toggler {
+        display: none;
+    }
+
+    .navbar .navbar-toggler-icon {
+        display: none;
+    }
+
+    .navbar .collapsed .navbar-collapse {
+        display: block !important;
+    }
+
+    .navbar .collapsed .navbar-toggler {
+        display: none;
+    }
+
+    .navbar .collapsed .navbar-toggler-icon {
+        display: none;
+    }
+
+    /* ++++++++++++++++++++++++++LOGO+++++++++++++++++++++++*/
+
+    /* CSS rule to style the mobile logo */
+
+
+    /* CSS rule to style the mobile logo */
+
+
+
+    /* CSS rule to style the footer */
+    .footer {
+        background-color: var(--primary-text-color);
+        height: 60px;
+    }
+
+    .navbar-text>a {
+        font-size: 10px;
+    }
+
+    .navbar-text>p {
+        color: rgb(12, 5, 3);
+        font-size: 18px;
+    }
+
+    .copyright {
+        padding-top: 20px;
+    }
+
+    .social {
+        padding-top: 7px;
+    }
+
+    .carousel-caption {
+        display: none;
+    }
+}
+
+/* Large devices (desktops, 992px and up)
+*/
+@media (min-width: 992px) {
+
+    .custom-row {
+
+        flex-direction: inherit;
+    }
+
+
+
+    #main_3d_image {
+        background-image: url(../assets/images/main_3D_1400.jpg);
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    #main_text {
+        float: right;
+        margin-top: 20%;
+    }
+
+    #main_text h2 {
+        /* color: crimson; */
+        font-size: 30px;
+    }
+
+    #main_text h3 {
+        /* color: darkcyan; */
+        font-size: 22px;
+    }
+
+    #main_text p {
+        font-size: 15px;
+    }
+
+    .card {
+        border: 0px solid rgba(0, 0, 0, .125);
+        /* border-radius: .25rem;*/
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: var(--primary-color);
+    }
+
+    .logo {
+        margin-top: 1px;
+        
+    }
+
+    .logo h1 {
+        font-family: cocaColaFont;
+        font-size: 59px;
+        margin: 0;
+        margin-top: 0px;
+        margin-bottom: -20px;
+        float: left;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .logo h2 {
+        font-family: cocaColaFont;
+        font-size: 65px;
+        margin-top: 7px;
+        margin-bottom: -25px;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 6px;
+        float: left;
+    }
+
+    .logo h3 {
+        font-size: 40px;
+        margin-top: 15px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 6px;
+        float: left;
+    }
+
+    .logo p {
+        font-size: 14px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 64px;
+        padding-left: 0px;
+    }
+
+
+
+    /* CSS rule to style the footer */
+    .footer {
+        background-color: var(--primary-color);
+        height: 75px;
+    }
+
+    .navbar-text>a {
+        font-size: 15px;
+    }
+
+    .navbar-text>p {
+        color: var(--primary-text-color);
+        font-size: 23px;
+    }
+
+    .copyright {
+        padding-top: 20px;
+    }
+
+    .social {
+        padding-top: 7px;
+    }
+
+    .carousel-caption {
+        display: inherit;
+    }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)
+*/
+@media (min-width: 1200px) {}
